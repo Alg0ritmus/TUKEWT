@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/*######### toto daj do inej zlozky #########*/
+/*deklaracia premennych: farieb atď:*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Poppins:wght@300;400;700&family=Yeseva+One&display=swap");
+/*Pretypuj z css root do scss var*/
+/* spravanie po tejto velkosti*/
+@media only screen and (min-width: 750px) {
+  .blog {
+    justify-content: left !important;
+  }
+
+  .article {
+    text-align: left !important;
+    border-top: none !important;
+    border-left: 0.4em #4e207b solid;
+  }
+
+  .blog-line {
+    width: 350px !important;
+  }
+}
+html {
+  overflow-x: hidden;
+}
+
+h2 {
+  color: white;
+}
+
+/*OBSAH*/
+.blog {
+  width: 100%;
+  min-height: 1000px;
+  height: 100%;
+  background: #1C1C28;
+  padding: 10em 0;
+  justify-content: center;
+  z-index: 1;
+}
+
+.blog img {
+  z-index: 2 !important;
+}
+
+.blog-title {
+  width: 99%;
+  text-align: center;
+  color: #FFF;
+  font-family: "Yeseva One", cursive;
+  font-size: 1.6em;
+}
+
+.blog-line {
+  margin: 1.5em;
+  margin-bottom: 10em;
+  width: 130px;
+  border-top: 2px #b938dd solid;
+}
+
+.article {
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(9, 9, 9, 0.1);
+  border-top: 0.4em #4e207b solid;
+  text-align: center;
+  padding: 2em 2em 3em 2em;
+  margin-bottom: 10em;
+  z-index: 999;
+}
+.article p {
+  color: #9b9a9f;
+  margin-bottom: 4em;
+  margin-top: 2em;
+  z-index: 999;
+  font-family: "Montserrat", sans-serif !important;
+}
+.article h2 {
+  color: white !important;
+  margin-bottom: 1em;
+  font-family: "Montserrat", sans-serif !important;
+}
+.article a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 25px;
+  border: 3px #4e207b solid;
+}
+
+/*  GULICKY */
+.ellipse_1,
+.ellipse_2,
+.ellipse_3,
+.ellipse_6 {
+  position: absolute;
+}
+
+.ellipse_1 {
+  left: -4em;
+  top: -8em;
+}
+
+.ellipse_3 {
+  right: -6em;
+}
+
+.ellipse_2 {
+  left: -7em;
+  width: 50%;
+  z-index: 2;
+  max-width: 350px;
+}
+
+.ellipse_6 {
+  right: 0;
+  bottom: 6em;
+}
+
+/*# sourceMappingURL=blog.css.map */

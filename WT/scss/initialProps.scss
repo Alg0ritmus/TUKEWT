@@ -1,0 +1,28 @@
+/*deklaracia premennych: farieb atď:*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Poppins:wght@300;400;700&family=Yeseva+One&display=swap');
+
+/*Pretypuj z css root do scss var*/
+$nav-foot: #212133;
+$basic-white: #FFF;
+$background: #1C1C28;
+$card-background: #28293D;
+$white:white;
+
+$about-card-background:rgb(9, 9, 9,0.1);
+$about-border:rgb(78, 32, 123);
+$about-border-light:rgb(78, 32, 123,0.5);
+$about-p:rgb(155, 154, 159);
+$aboud-hr:rgb(185, 56, 221);
+
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 500px;
+$breakpoint-md: 750px;
+$breakpoint-lg: 1250px;
+$breakpoint-xl: 1400px;
+
+$Yeseva:'Yeseva One', cursive;
+$MontS: 'Montserrat', sans-serif;
+$Pop:'Poppins', sans-serif;
+

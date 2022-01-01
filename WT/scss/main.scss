@@ -1,0 +1,175 @@
+//BASIC INITS
+@import "initialProps";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-x: none;
+}
+
+
+/*      Responzivnost       */
+
+
+/*spravanie, DO tychto velkosti*/
+@media only screen and (max-width: 500px) {
+	.col-sm{
+		width: 100%;
+	}
+
+
+}
+@media only screen and (max-width: 750px) {
+	.col-sm-3 {
+		    -ms-flex: 0 0 100%;
+		    flex: 0 0 100%;
+		    max-width: 100%;
+		}
+
+}
+@media only screen and (max-width: 1250px) {
+	.col-sm{
+		width: 33.33% !important;
+	}
+
+}
+@media only screen and (max-width: 1400px) {
+	.col-sm{
+		width: 33.33% !important;
+	}
+
+}
+
+/* spravanie po tejto velkosti*/
+
+@media only screen and (min-width: 750px) {
+	.col-sm-3 {
+		    -ms-flex: 0 0 33.33%;
+		    flex: 0 0 33.33%;
+		    max-width: 33.33%;
+		}
+
+}
+
+
+
+
+/*	Pre vsetky srany rovnake... obsah jedlotlivych stranok daj do noveho css	*/
+html { 
+  scroll-behavior: smooth; 
+}
+
+body{
+	overflow-x: hidden;
+	position: relative;
+}
+
+
+h1{
+	font-size: 4em;
+	font-weight: bold;
+}
+h3{
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+a{
+	cursor: pointer;
+}
+
+.navbar,footer,.footer{
+	z-index: 100 !important;
+}
+
+.navbar{
+	background-color: $nav-foot;
+
+}
+.nav-link{
+	text-decoration: none;
+	font-family: $Pop;
+	font-weight: bold;
+	color: white;
+}
+
+.navbar-toggler:focus{
+	outline: none;
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 50px;
+}
+
+.fa{
+	
+	color: $white;
+}
+
+.fa-bars-sm{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#fabars{
+	display: initial;
+}
+
+#faclose{
+	display:none; 
+}
+.regular-padding{
+	padding: 0.5em 8% !important;
+}
+
+.navbar-toggler-icon{
+	display: table-cell;
+}
+
+.footer{
+	width: 100vw;
+	position: relative;
+	background-color: $nav-foot;
+	border-radius: 0;
+	bottom:0;
+	color: $white;
+	padding-top: 2em !important;
+	padding-bottom: 1.5em !important; 
+}
+.footer p:nth-child(2),
+.footer p:nth-child(3){
+	color: #9B9A9F;
+}
+
+
+
+/* scroll*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: $card-background;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var($about-border-light);
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px var($about-border);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var($about-border); 
+}
+

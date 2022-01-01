@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyBlog</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="scss/main.css">
+	<link rel="stylesheet" type="text/css" href="scss/homePage.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+
+</head>
+<body>
+<!-- BOOTSTRAP NAV -->	
+<nav class="navbar navbar-expand-sm regular-padding">
+  <a class="navbar-brand" href="#"><img src="./image/logo.svg"></a>
+  <button class="navbar-toggler" type="button" onclick="Expand()" data-toggle="collapse" data-target="#collapsibleNavbar"/>
+    <span class="navbar-toggler-icon">   
+    <i id="fabars" class="fa fa-bars fa-bars-sm"></i>
+    <i id="faclose" class="fa fa-close fa-bars-sm"></i>
+	</span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="blog.html">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="uxui.html">UI/UX</a>
+      </li>  
+	  <li class="nav-item">
+        <a class="nav-link" href="vypis_udajov.html">VypisDB</a>
+      </li>  
+	  <li class="nav-item">
+        <a class="nav-link" href="insert.html">InsertToDB</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+
+
+<section class="main-section">
+	<img class="ellipse_2" src="image/ellipse_2.svg">
+	<img class="ellipse_1" src="image/ellipse_1.svg">
+	<div class="main-section-title">
+		<h3 class="main-text-faculty">Welcome to my first Blog - site</h3>
+		<h1 class="main-text-name">Patrik</h1>
+		<h1 class="main-text-name">Zeleňák</h1>
+		<h3 class="main-text-uni">Technical University of Košice</h3>
+	</div>
+	<div class="arrow-secs">
+		<a class="arrows" href="#ashref"><img src="./image/tria.svg"></a>
+	</div>
+	<img class="ellipse_3" src="image/ellipse_3.svg">
+	<img class="Myblog" src="image/Myblog.svg">
+</section>
+<!-- BOOTSTRAP GRID - overwritten -->	
+<section class="cards-section">
+	    
+	      <div class="row">
+		      <div class="col-sm-3 my-card">
+		      	<h1>Blog</h1>
+		      	<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+		      </div>
+		      <div class="col-sm-3 my-card ">
+		      	<h1>Kontakt</h1>
+		      	<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+		      </div>
+		      <div class="col-sm-3 my-card ">
+		      	<h1>Tuke</h1>
+		      	<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+		      </div>
+		   </div>  
+
+</section>
+<section class="about-section" id="ashref">
+	<img class="ellipse_6" src="image/ellipse_6.svg">
+	<div class=about-section-wrapper>
+		<div class="about-section-text">
+			<h1>About</h1>
+			<p>
+				<b>O webe.</b> Celý projekt je kombináciou Bootstrapu a vanilla kódu, v kt. sú dodržané základne princípy UX/UI designu. Viac v "optimalisation/uiux.txt" a "readme.txt"</p>
+			<p>
+				<b>Feedback.</b> Proces tvorby webstránky som považoval za akési oprašenie CSS znalosti. Pri návrhu designu som použil Adobe XD. Tento prototyp som neskôr prepísal do kódu. 
+			</p>
+		</div>
+		<div class="about-section-img">
+			<img src="image/AboutImg.png">
+		</div>
+		
+	</div>
+	<img class="ellipse_12" src="image/ellipse_12.svg">
+</section>
+
+
+<!--BOOTSTRAP FOOTER-->
+<footer>
+	<div class="footer jumbotron text-center" style="margin-bottom:0">
+	  <p>Táto stránka bola špecialne vytvorená pre predmet Webové Technológie</p>
+	  <p >Technical University of Košice</p>
+	  <p>By Patrik Zeleňák</p>
+	</div>
+</footer>
+
+
+
+</body>
+
+	
+<script type="text/javascript">
+	var counter=1;
+
+	Expand=()=>{
+		var bars = document.getElementById("fabars");
+		var close = document.getElementById("faclose");
+		if(counter%2==0){
+			bars.style.display="block"
+			close.style.display="none";
+		}
+		if(counter%2==1){
+			bars.style.display="none"
+			close.style.display="block";
+		}
+		counter++;
+	}
+</script>
+</html>

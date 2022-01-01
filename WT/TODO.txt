@@ -1,0 +1,6 @@
+TODO list:
+
+SCSS:
+
+node-sass -o  scss .\scss\insert.scss
+node-sass -o  fileDirect pathToFiles

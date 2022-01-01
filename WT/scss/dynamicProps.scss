@@ -1,0 +1,22 @@
+@import "initialProps";
+p{
+    font-family: $Yeseva !important;
+}
+
+h1{
+    color: $about-border !important;
+}
+
+a:active{
+    color: $about-border !important;
+}
+
+a:hover{
+    color: $about-border !important;
+}
+
+.make-it-diff{
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: underline;
+}

@@ -1,0 +1,42 @@
+User experience & User interface
+
+INTERACTION: Hneď na prvej web-stránke si môžeme všimnúť niekoľko dynamických prvkov(arrows,dynamický navbar), ktoré majú za úlohu zlepšiť návštevníkovi orientáciu na webe.
+
+
+/* arrows */ - Slúžia nie len ako ukazovateľ smeru (pre intuitívne browsovanie webu), ale aj ako "záložka". Teda po kliknutí na ne, nás presunú do konkrétnej sekcie(About).
+
+
+/* dynamický navbar */ - V dnešnej dobe, sa dynamický navbar stal akýmsi štandardom. Pri nízkom rozlíšeni sa navbar prispôsobí danému rozlíšeniu. Platí to aj opačne.
+
+	Malé rozlíšenie - navbar sa "collapse" zbalí do seba, pričom v pravom hornom rohu nám budú poskytnuté funkcie rozbalenia/zbalenia.
+
+	Vačšie rozlíšenie - navbar sa "collapse" rozbalí.
+	funkcie pre rozbalenie/zbalenie budú z navbaru odstránené.
+
+
+
+/* Layout */
+
+Layout a celkový design stránky bol spracovaný v ilustračnom programe Adobe XD. Návr stránky bol potom prepísaný do kódu(HTML/CSS/JS). Viac o JS je možné nájsť v 'readme.txt'. Logo som štandardne vložil do ľavého horného rohu. V celom designe webstránky boli dodržané základné princípi UX/UI designu:
+	
+	- whitespace: dostatočné odsadenie odsekov, nadpisov atd.
+
+	- visual hrierarchy: Prisposobenie dôležitých prvkov na stránke tak, aby boli vizuálne odlišné (veľkosť písma, farby, font ...)
+
+	- colors : viac nižšie
+
+	- contrast: celý design bol navrhnutý tak, aby bolo všetko dobre čítateľné a príjemne na ľudské oko
+
+	- typography: konzistentnosť typografie
+
+	...
+
+
+/* Farby */
+
+Farby, kt. boli použité v designe sú bezpečné z hľadiska farbosleposti, t.j. tieto farby vidia všetci ľudia rovnako bez rozdielu zrakovej spôsobilosti(Protanopia,Deuteranopia). Viac na:
+
+	 https://en.wikipedia.org/wiki/Color_blindness
+
+
+

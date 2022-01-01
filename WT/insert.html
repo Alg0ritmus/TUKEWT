@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FamilyMembers</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="scss/main.css">
+	<link rel="stylesheet" type="text/css" href="scss/blog.css">
+  <link rel="stylesheet" type="text/css" href="scss/insert.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+
+</head>
+<body>
+<!-- BOOTSTRAP NAV -->	
+<nav class="navbar navbar-expand-sm regular-padding">
+  <a class="navbar-brand" href="#"><img src="./image/logo.svg"></a>
+  <button class="navbar-toggler" type="button" onclick="Expand()" data-toggle="collapse" data-target="#collapsibleNavbar"/>
+    <span class="navbar-toggler-icon">   
+    <i id="fabars" class="fa fa-bars fa-bars-sm"></i>
+    <i id="faclose" class="fa fa-close fa-bars-sm"></i>
+	</span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="blog.html">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="uxui.html">UI/UX</a>
+      </li>  
+	  <li class="nav-item">
+        <a class="nav-link" href="vypis_udajov.html">VypisDB</a>
+      </li>  
+	  <li class="nav-item">
+        <a class="nav-link" href="insert.html">InsertToDB</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+
+
+<!-- BS4 Form Section -->
+<section class="blog container">
+    <div id="table1">
+      <h2>Pridaj položku do DB:</h2>
+      <form class="form-inline">
+        
+        <!--<input id="form-email-field2" type="name" class="form-control mb-2 mr-sm-2 searchBox" placeholder="Search..." > 
+        <input id="form-email-field3" type="name" class="form-control mb-2 mr-sm-2 searchBox" placeholder="Search..." > 
+        <input id="form-email-field3" type="name" class="form-control mb-2 mr-sm-2 searchBox" placeholder="Search..." >   -->   
+        
+        
+      </form>
+      <!-- VERY OMPORTANT NOT TO BE INSIDE OF FORM DUE TO WEB REFRESH -->
+      <button type="" onclick="addMemberDB()" class="btn btn-primary mb-2">Submit</button>
+      
+
+      
+    </div>
+
+    <div id="table1">
+      <h2>Pridaj nový stplec:</h2>
+      <form class="form-inline">
+        <input class="searchBox" id="form-email-fieldx1" type="name" placeholder="Názov stlpca">
+        <!-- <input class="searchBox" id="form-email-fieldx2" type="name" placeholder="Datovy Typ"> -->
+        <select class="searchBox" id="form-email-fieldx2" type="name" placeholder="Datovy Typ">
+          <option selected  disabled>Dátovy Typ</option>
+          <option   value="varchar(255)">varchar(255)</option>
+          <option   value="int">int</option>
+        </select>
+        <input class="searchBox" id="form-email-fieldx3" type="name" placeholder="Hodnota">
+        
+        
+      </form>
+      <!-- VERY OMPORTANT NOT TO BE INSIDE OF FORM DUE TO WEB REFRESH -->
+      <button type="" onclick="addCol()" class="btn btn-primary mb-2">Submit</button>
+      
+      <center><h2>Tabuľka vypisu:</h2></center>
+      <div id="table-of-members">
+        <div class="row2 stable">
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<div class="container">
+  <h2 id="demo">Popis:</h2>
+  <p style="color:rgb(190, 181, 194);">Pre pridávanie položiek do DB jednoducho vyplnime formular a odošleme ho (horny button) "Submit".</p><br>
+  <p style="color:rgb(190, 181, 194);">Pre pridanie nového stplca do DB vyplníme formular (spodný) a formular odošleme "Submit". Podporované dátove typy su </p>
+  <p style="color:rgb(190, 181, 194);">Po vyplnení formulára a stlačení Submit(ľuboveľného) Sa nam zobrazí aktuálna Tabuľka s danou hodnotou.</p>
+  <p style="color:rgb(190, 181, 194);">Pri probléme so zobrazenim všetkých políčok pre pridávanie do DB, prosím refreshnite stranku.</p>
+  <p style="color:rgb(190, 181, 194);">Uistite sa, že DB beží."</p><br><br>
+  </div>
+
+<!--BOOTSTRAP FOOTER-->
+<footer>
+	<div class="footer jumbotron text-center" style="margin-bottom:0">
+	  <p>Táto stránka bola špecialne vytvorená pre predmet Webové Technológie</p>
+	  <p >Technical University of Košice</p>
+	  <p>By Patrik Zeleňák</p>
+	</div>
+</footer>
+
+
+</body>
+
+	
+<script type="text/javascript">
+	var counter=1;
+
+	Expand=()=>{
+		var bars = document.getElementById("fabars");
+		var close = document.getElementById("faclose");
+		if(counter%2==0){
+			bars.style.display="block"
+			close.style.display="none";
+		}
+		if(counter%2==1){
+			bars.style.display="none"
+			close.style.display="block";
+		}
+		counter++;
+	}
+</script>
+<script>
+    /* makeDBCall=async()=>{
+        var value1= document.getElementById("form-email-field").value;
+        
+        var text= document.getElementById("demo");
+        var result;
+        try{
+          await fetch('http://localhost:5000/DB/'+`value1=${value1}`)
+          .then(response => response.json())
+          .then(data => {
+            console.log(data);
+            result= data;
+          });
+        }catch(err){
+          console.log(err)
+        }
+        return result;
+    } */
+
+    showAllDB=async()=>{
+        var result;
+        try{
+          await fetch('http://localhost:5000/api/getAll/')
+          .then(response => response.json())
+          .then(data => {
+            console.log(data);
+            result= data;
+          });
+        }catch(err){
+          console.log(err)
+        }
+        fillTable(result);
+    }
+
+    addMemberDB=async()=>{
+        var result;
+        tempObj = {keys:[],array:[]}
+        var value1= document.getElementById("form-email-field1");
+        var indexik = 1;
+        while(value1!=null){
+          
+          console.log(value1);
+          
+            tempObj.keys.push(value1.placeholder);
+            tempObj.array.push(value1.value)
+          
+          
+          indexik+=1;
+          value1= document.getElementById("form-email-field"+indexik.toString());
+        }
+        console.log("temp",tempObj);
+       try{
+        const rawResponse = await fetch('http://localhost:5000/api/postMem/', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(tempObj)
+        });
+        const content = await rawResponse.json();
+
+        console.log(content);
+
+        }catch(err){
+          console.log(err);
+        }
+
+        showAllDB();
+
+    }
+
+
+    addCol=async()=>{
+      var result;
+        tempObj = {keys:[],array:[]}
+        var name= document.getElementById("form-email-fieldx1").value;
+        var type= document.getElementById("form-email-fieldx2").value;
+        var value1= document.getElementById("form-email-fieldx3").value;
+        var indexik = 1;
+        console.log("temp",tempObj);
+       try{
+        const rawResponse = await fetch('http://localhost:5000/api/addCol/', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({data:[name,type,value1]})
+        });
+        const content = await rawResponse.json();
+
+        console.log(content);
+
+        }catch(err){
+          console.log(err);
+        }
+
+        showAllDB();
+
+    }
+
+
+
+
+
+
+
+    
+    
+
+    fillRow=(jsonObj)=>{
+      var table = document.getElementById('table-of-members');
+      var row = document.createElement("div");
+      for (var key in jsonObj){
+        var value = jsonObj[key];
+        //vytvor element
+        
+        row.classList.add("row2");
+
+        var col=document.createElement("div");
+        col.classList.add("col2");
+        col.innerHTML+=value;
+        row.appendChild(col)
+
+        table.appendChild(row);
+      }
+    }
+
+  chearTable=()=>{
+    var e = document.getElementById('table-of-members');
+    var head = document.getElementsByClassName('stable')[0];
+    //e.firstElementChild can be used.
+    var child = e.lastElementChild; 
+    while (child != e.firstElementChild) {
+            e.removeChild(child);
+            child = e.lastElementChild;
+        }
+    var childHead = head.lastElementChild; 
+    while (childHead) {
+            head.removeChild(childHead);
+            childHead = head.lastElementChild;
+        }
+      
+  }
+
+  fillTable=(JSONobj)=>{
+    
+    chearTable();
+    var head = document.getElementsByClassName('stable')[0];
+    var valueArray = Object.keys(JSONobj.data[0])
+    for (var value in valueArray){        
+        console.log(valueArray);
+        //vytvor element
+        var col=document.createElement("div");
+        col.classList.add("col2");
+        col.classList.add("bold");
+        col.innerHTML+=valueArray[value];
+        head.appendChild(col);
+    }
+    for(let i =0;i<JSONobj.size;i++){
+      fillRow(JSONobj.data[i])
+    }
+  }
+
+
+  createInputFields=async()=>{
+    var formFields = document.getElementsByClassName("form-inline")[0];
+    var result;
+    try{
+          await fetch('http://localhost:5000/api/getSize/')
+          .then(response => response.json())
+          .then(data => {
+            console.log(data);
+            result= data;
+          });
+        }catch(err){
+          console.log(err)
+        }
+
+      console.log('pocet prvkov',result.data);
+      for(let i=0;i<result.size-1;i++){
+        Inp = document.createElement("input");
+        Inp.classList.add("searchBox");
+        Inp.id="form-email-field"+(i+1);
+        Inp.type="name";
+        Inp.placeholder=result.data[i+1];
+        formFields.appendChild(Inp);
+      }
+      return result.size;
+
+
+
+  }
+
+  getFieldCount=async()=>{
+    var formFields = document.getElementsByClassName("form-inline")[0];
+    var result;
+    try{
+          await fetch('http://localhost:5000/api/getSize/')
+          .then(response => response.json())
+          .then(data => {
+            console.log(data);
+            result= data;
+          });
+        }catch(err){
+          console.log(err)
+        }
+
+      return result;
+
+
+
+  }
+</script>
+
+
+
+<script>
+  createInputFields();
+</script>
+</html>

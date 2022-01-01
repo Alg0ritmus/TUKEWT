@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FamilyMembers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="scss/main.css">
+    <link rel="stylesheet" type="text/css" href="scss/blog.css">
+    <link rel="stylesheet" type="text/css" href="scss/insert.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+
+<body>
+    <!-- BOOTSTRAP NAV -->
+    <nav class="navbar navbar-expand-sm regular-padding">
+        <a class="navbar-brand" href="#"><img src="./image/logo.svg"></a>
+        <button class="navbar-toggler" type="button" onclick="Expand()" data-toggle="col2lapse"
+            data-target="#col2lapsibleNavbar" />
+        <span class="navbar-toggler-icon">
+            <i id="fabars" class="fa fa-bars fa-bars-sm"></i>
+            <i id="faclose" class="fa fa-close fa-bars-sm"></i>
+        </span>
+        </button>
+        <div class="col2lapse navbar-col2lapse justify-content-end" id="col2lapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="uxui.html">UI/UX</a>
+                </li>  
+                <li class="nav-item">
+                  <a class="nav-link" href="vypis_udajov.html">VypisDB</a>
+                </li>  
+                <li class="nav-item">
+                  <a class="nav-link" href="insert.html">InsertToDB</a>
+                </li>    
+              </ul>
+        </div>
+    </nav>
+
+
+    <!-- BS4 Form Section -->
+    <section class="_blog container">
+        
+        <div id="table1 ">
+            <div class="container">
+            <form class="form-inline">
+
+                <!--<input id="form-email-field2" type="name" class="form-control mb-2 mr-sm-2 searchBox" placeholder="Search..." > 
+        <input id="form-email-field3" type="name" class="form-control mb-2 mr-sm-2 searchBox" placeholder="Search..." > 
+        <input id="form-email-field3" type="name" class="form-control mb-2 mr-sm-2 searchBox" placeholder="Search..." >   -->
+
+
+            </form>
+            <!-- VERY OMPORTANT NOT TO BE INSIDE OF FORM DUE TO WEB REFRESH -->
+            <button type="" onclick="addMemberDB()" class="btn btn-primary mb-2">Submit</button>
+
+        </div>
+
+        </div>
+
+        <div id="table1">
+            <div class="container">
+            <form class="form-inline">
+                <input class="searchBox" id="form-email-fieldx1" type="name" placeholder="Názov stlpca">
+                <input class="searchBox" id="form-email-fieldx2" type="name" placeholder="Datovy Typ">
+                <input class="searchBox" id="form-email-fieldx3" type="name" placeholder="Hodnota">
+
+
+            </form>
+            <!-- VERY OMPORTANT NOT TO BE INSIDE OF FORM DUE TO WEB REFRESH -->
+            <button type="" onclick="addCol2()" class="btn btn-primary mb-2">Submit</button>
+            </div>
+
+            <div id="table-of-members">
+                <div class="row2 stable">
+
+                    <div class="col2 bold">id</div>
+                    <div class="col2 bold">meno</div>
+                    <div class="col2 bold">priezvisko</div>
+                    <div class="col2 bold">vek</div>
+                    <div class="col2 bold">pribuzenstvo</div>
+                    <div class="col2 bold">majetok</div>
+                    <div class="col2 bold">auto</div>
+                    <div class="col2 bold">majetky</div>
+                    <div class="col2 bold">znacky</div>
+                    <div class="col2 bold">auticka</div>
+                    <div class="col2 bold">notebook</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">1</div>
+                    <div class="col2">Patrik</div>
+                    <div class="col2">Zeleňák</div>
+                    <div class="col2">21</div>
+                    <div class="col2">ja</div>
+                    <div class="col2">100</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">2</div>
+                    <div class="col2">Dax</div>
+                    <div class="col2">Zeleňák</div>
+                    <div class="col2">15</div>
+                    <div class="col2">brat</div>
+                    <div class="col2">100</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">3</div>
+                    <div class="col2">Max</div>
+                    <div class="col2">Zeleňák</div>
+                    <div class="col2">31</div>
+                    <div class="col2">ujo</div>
+                    <div class="col2">100</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">4</div>
+                    <div class="col2">Katherine</div>
+                    <div class="col2">Zeleňák</div>
+                    <div class="col2">40</div>
+                    <div class="col2">mama</div>
+                    <div class="col2">100</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">5</div>
+                    <div class="col2">Mark</div>
+                    <div class="col2">Zeleňák</div>
+                    <div class="col2">43</div>
+                    <div class="col2">otec</div>
+                    <div class="col2">100</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">6</div>
+                    <div class="col2">Nika</div>
+                    <div class="col2">Vaho</div>
+                    <div class="col2">22</div>
+                    <div class="col2">laska</div>
+                    <div class="col2">100</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">7</div>
+                    <div class="col2">pATO</div>
+                    <div class="col2">zelo</div>
+                    <div class="col2">21</div>
+                    <div class="col2">ja</div>
+                    <div class="col2">100</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">8</div>
+                    <div class="col2">pATO</div>
+                    <div class="col2">zelo</div>
+                    <div class="col2">21</div>
+                    <div class="col2">ja</div>
+                    <div class="col2">100</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">9</div>
+                    <div class="col2">jan</div>
+                    <div class="col2">papaj</div>
+                    <div class="col2">33</div>
+                    <div class="col2">ucitel</div>
+                    <div class="col2">100</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">10</div>
+                    <div class="col2">blabla</div>
+                    <div class="col2">assad</div>
+                    <div class="col2">12</div>
+                    <div class="col2">ja</div>
+                    <div class="col2">1000</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">11</div>
+                    <div class="col2">blabla</div>
+                    <div class="col2">assad</div>
+                    <div class="col2">12</div>
+                    <div class="col2">ja</div>
+                    <div class="col2">1000</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">12</div>
+                    <div class="col2">blabla</div>
+                    <div class="col2">assad</div>
+                    <div class="col2">12</div>
+                    <div class="col2">ja</div>
+                    <div class="col2">1000</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">13</div>
+                    <div class="col2">blabla</div>
+                    <div class="col2">assad</div>
+                    <div class="col2">12</div>
+                    <div class="col2">ja</div>
+                    <div class="col2">1000</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">14</div>
+                    <div class="col2">blabla</div>
+                    <div class="col2">assad</div>
+                    <div class="col2">12</div>
+                    <div class="col2">ja</div>
+                    <div class="col2">1000</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">15</div>
+                    <div class="col2">pato</div>
+                    <div class="col2">zelo</div>
+                    <div class="col2">21</div>
+                    <div class="col2">ja</div>
+                    <div class="col2">2000</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">16</div>
+                    <div class="col2">pato</div>
+                    <div class="col2">zelo</div>
+                    <div class="col2">21</div>
+                    <div class="col2">ja</div>
+                    <div class="col2">2000</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">17</div>
+                    <div class="col2">MArian</div>
+                    <div class="col2">odvedla</div>
+                    <div class="col2">44</div>
+                    <div class="col2">sused</div>
+                    <div class="col2">10000</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">18</div>
+                    <div class="col2">xxx</div>
+                    <div class="col2">yyy</div>
+                    <div class="col2">22</div>
+                    <div class="col2">aa</div>
+                    <div class="col2">1000</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">19</div>
+                    <div class="col2">xxx</div>
+                    <div class="col2">yyy</div>
+                    <div class="col2">22</div>
+                    <div class="col2">aa</div>
+                    <div class="col2">1000</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">20</div>
+                    <div class="col2">skuska</div>
+                    <div class="col2">dasd21</div>
+                    <div class="col2">21</div>
+                    <div class="col2">sused</div>
+                    <div class="col2">102</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">21</div>
+                    <div class="col2">skuska</div>
+                    <div class="col2">dasd21</div>
+                    <div class="col2">21</div>
+                    <div class="col2">sused</div>
+                    <div class="col2">102</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">22</div>
+                    <div class="col2">skuska</div>
+                    <div class="col2">dasd21</div>
+                    <div class="col2">21</div>
+                    <div class="col2">sused</div>
+                    <div class="col2">102</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+                <div class="row2">
+                    <div class="col2">23</div>
+                    <div class="col2">mmm</div>
+                    <div class="col2">nnn</div>
+                    <div class="col2">111</div>
+                    <div class="col2">nnn</div>
+                    <div class="col2">102</div>
+                    <div class="col2">null</div>
+                    <div class="col2">100</div>
+                    <div class="col2">Maserati</div>
+                    <div class="col2">Fiat</div>
+                    <div class="col2">Dell</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <h3 id="demo">skusame</h3>
+
+    <!--BOOTSTRAP FOOTER-->
+    <footer>
+        <div class="footer jumbotron text-center" style="margin-bottom:0">
+            <p>Táto stránka bola špecialne vytvorená pre predmet Webové Technológie</p>
+            <p>Technical University of Košice</p>
+            <p>By Patrik Zeleňák</p>
+        </div>
+    </footer>
+
+
+</body>
+
+
+<script type="text/javascript">
+    var counter = 1;
+
+    Expand = () => {
+        var bars = document.getElementById("fabars");
+        var close = document.getElementById("faclose");
+        if (counter % 2 == 0) {
+            bars.style.display = "block"
+            close.style.display = "none";
+        }
+        if (counter % 2 == 1) {
+            bars.style.display = "none"
+            close.style.display = "block";
+        }
+        counter++;
+    }
+</script>
+<script>
+    /* makeDBCall=async()=>{
+        var value1= document.getElementById("form-email-field").value;
+        
+        var text= document.getElementById("demo");
+        var result;
+        try{
+          await fetch('http://localhost:5000/DB/'+`value1=${value1}`)
+          .then(response => response.json())
+          .then(data => {
+            console.log(data);
+            result= data;
+          });
+        }catch(err){
+          console.log(err)
+        }
+        return result;
+    } */
+
+    showAllDB = async () => {
+        var result;
+        try {
+            await fetch('http://localhost:5000/api/getAll/')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    result = data;
+                });
+        } catch (err) {
+            console.log(err)
+        }
+        fillTable(result);
+    }
+
+    addMemberDB = async () => {
+        var result;
+        tempObj = { keys: [], array: [] }
+        var value1 = document.getElementById("form-email-field1");
+        var indexik = 1;
+        while (value1 != null) {
+
+            console.log(value1);
+
+            tempObj.keys.push(value1.placeholder);
+            tempObj.array.push(value1.value)
+
+
+            indexik += 1;
+            value1 = document.getElementById("form-email-field" + indexik.toString());
+        }
+        console.log("temp", tempObj);
+        try {
+            const rawResponse = await fetch('http://localhost:5000/api/postMem/', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(tempObj)
+            });
+            const content = await rawResponse.json();
+
+            console.log(content);
+
+        } catch (err) {
+            console.log(err);
+        }
+
+        showAllDB();
+
+    }
+
+
+    addCol2 = async () => {
+        var result;
+        tempObj = { keys: [], array: [] }
+        var name = document.getElementById("form-email-fieldx1").value;
+        var type = document.getElementById("form-email-fieldx2").value;
+        var value1 = document.getElementById("form-email-fieldx3").value;
+        var indexik = 1;
+        console.log("temp", tempObj);
+        try {
+            const rawResponse = await fetch('http://localhost:5000/api/addCol2/', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ data: [name, type, value1] })
+            });
+            const content = await rawResponse.json();
+
+            console.log(content);
+
+        } catch (err) {
+            console.log(err);
+        }
+
+        showAllDB();
+
+    }
+
+
+
+
+
+
+
+
+
+
+    fillRow2 = (jsonObj) => {
+        var table = document.getElementById('table-of-members');
+        var row2 = document.createElement("div");
+        for (var key in jsonObj) {
+            var value = jsonObj[key];
+            //vytvor element
+
+            row2.classList.add("row2");
+
+            var col2 = document.createElement("div");
+            col2.classList.add("col2");
+            col2.innerHTML += value;
+            row2.appendChild(col2)
+
+            table.appendChild(row2);
+        }
+    }
+
+    chearTable = () => {
+        var e = document.getElementById('table-of-members');
+        var head = document.getElementsByClassName('stable')[0];
+        //e.firstElementChild can be used.
+        var child = e.lastElementChild;
+        while (child != e.firstElementChild) {
+            e.removeChild(child);
+            child = e.lastElementChild;
+        }
+        var childHead = head.lastElementChild;
+        while (childHead) {
+            head.removeChild(childHead);
+            childHead = head.lastElementChild;
+        }
+
+    }
+
+    fillTable = (JSONobj) => {
+
+        chearTable();
+        var head = document.getElementsByClassName('stable')[0];
+        var valueArray = Object.keys(JSONobj.data[0])
+        for (var value in valueArray) {
+            console.log(valueArray);
+            //vytvor element
+            var col2 = document.createElement("div");
+            col2.classList.add("col2");
+            col2.classList.add("bold");
+            col2.innerHTML += valueArray[value];
+            head.appendChild(col2);
+        }
+        for (let i = 0; i < JSONobj.size; i++) {
+            fillRow2(JSONobj.data[i])
+        }
+    }
+
+
+    createInputFields = async () => {
+        var formFields = document.getElementsByClassName("form-inline")[0];
+        var result;
+        try {
+            await fetch('http://localhost:5000/api/getSize/')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    result = data;
+                });
+        } catch (err) {
+            console.log(err)
+        }
+
+        console.log('pocet prvkov', result.data);
+        for (let i = 0; i < result.size - 1; i++) {
+            Inp = document.createElement("input");
+            Inp.classList.add("searchBox");
+            Inp.id = "form-email-field" + (i + 1);
+            Inp.type = "name";
+            Inp.placeholder = result.data[i + 1];
+            formFields.appendChild(Inp);
+        }
+        return result.size;
+
+
+
+    }
+
+    getFieldCount = async () => {
+        var formFields = document.getElementsByClassName("form-inline")[0];
+        var result;
+        try {
+            await fetch('http://localhost:5000/api/getSize/')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    result = data;
+                });
+        } catch (err) {
+            console.log(err)
+        }
+
+        return result;
+
+
+
+    }
+</script>
+
+
+
+<script>
+    createInputFields();
+</script>
+
+</html>

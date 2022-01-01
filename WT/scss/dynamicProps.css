@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*deklaracia premennych: farieb atď:*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Poppins:wght@300;400;700&family=Yeseva+One&display=swap");
+/*Pretypuj z css root do scss var*/
+p {
+  font-family: "Yeseva One", cursive !important;
+}
+
+h1 {
+  color: #4e207b !important;
+}
+
+a:active {
+  color: #4e207b !important;
+}
+
+a:hover {
+  color: #4e207b !important;
+}
+
+.make-it-diff {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=dynamicProps.css.map */

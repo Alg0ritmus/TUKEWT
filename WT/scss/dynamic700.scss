@@ -1,0 +1,76 @@
+@import "initialProps";
+  $nav-foot: rgb(28, 33, 53) !important;
+  $background: rgb(35, 42, 67) !important;
+
+  $about-border: rgb(216, 205, 176) !important;
+  $about-border-light: rgb(216, 205, 176,0.5) !important;
+  $about-p: rgb(231, 233, 238) !important;
+  $aboud-hr: rgb(216, 205, 176)!important;
+
+  p{
+      font-family: $Yeseva ;
+  }
+  
+  h1{
+      color: $about-border ;
+  }
+  
+  
+  a{
+      border: $about-border;
+      &:hover,
+      &:active{
+          color: $about-border-light;
+      }
+  }
+  
+  
+  
+  .make-it-diff{
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: underline;
+  }
+  
+  .uxui-wrapper-line{
+      border: $aboud-hr;
+  }
+  
+  .uxui-wrapper{
+  
+    background:$background;
+  
+  }
+  
+  .uiux-main{
+    background: $about-card-background;
+      border: $about-border-light;
+  }
+  
+  .button-field{
+      background-color: $background;
+  }
+  
+  ::-webkit-scrollbar {
+      width: 10px;
+      background-color: $card-background;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px black; 
+      border-radius: 10px;
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: $about-border-light;
+      border-radius: 10px;
+      box-shadow: 0 0 5px 5px $about-border;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: $about-border; 
+    }
+    

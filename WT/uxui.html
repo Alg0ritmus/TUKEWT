@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Myuxui-wrapper</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="scss/main.css">
+	<link rel="stylesheet" type="text/css" href="scss/uiux.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" class="dynamic700" type="text/css" href="scss/dynamic700.css" disabled>
+  <link rel="stylesheet" class="dynamic900" type="text/css" href="scss/dynamic900.css" disabled>
+  <link rel="stylesheet" class="dynamic1300" type="text/css" href="scss/dynamic1300.css" disabled>
+  <link rel="stylesheet" class="dynamic1600" type="text/css" href="scss/dynamic1600.css" disabled>
+
+  
+
+</head>
+<body>
+<!-- BOOTSTRAP NAV -->	
+<nav class="navbar navbar-expand-sm regular-padding">
+  <a class="navbar-brand" href="#"><img src="./image/logo.svg"></a>
+  <button class="navbar-toggler" type="button" onclick="Expand()" data-toggle="collapse" data-target="#collapsibleNavbar"/>
+    <span class="navbar-toggler-icon">   
+    <i id="fabars" class="fa fa-bars fa-bars-sm"></i>
+    <i id="faclose" class="fa fa-close fa-bars-sm"></i>
+	</span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+		<li class="nav-item">
+		  <a class="nav-link" href="index.html">Home</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="blog.html">Blog</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="uxui.html">UI/UX</a>
+		</li>  
+		<li class="nav-item">
+		  <a class="nav-link" href="vypis_udajov.html">VypisDB</a>
+		</li>  
+		<li class="nav-item">
+		  <a class="nav-link" href="insert.html">InsertToDB</a>
+		</li>    
+	  </ul>
+  </div>  
+</nav>
+
+
+<section class="uxui-wrapper">
+	<div class="uxui-wrapper-title">
+		<h1>UI/UX</h1>
+		<center>
+			<hr class="uxui-wrapper-line">
+		</center>
+	</div>
+	<div class="uiux-main">
+		<h2 class="make-it-diff">sekcia_zmena</h2>
+		<p>
+			Layout a celkový design stránky bol spracovaný v ilustračnom programe Adobe XD. Návr stránky bol potom prepísaný do kódu(HTML/CSS/JS). Viac o JS je možné nájsť v 'readme.txt'. Logo som štandardne vložil do ľavého horného rohu. V celom designe webstránky boli dodržané základné princípi UX/UI designu.
+		</p>
+
+		<p>
+			Whitespace pre dostatočné odsadenie odsekov, nadpisov atd.
+			Nesime chýbať ani visual hrierarchy, teda prisposobenie dôležitých prvkov na stránke tak, aby boli vizuálne odlišné (veľkosť písma, farby, font ...). Dôležitým prvkom sú farby, použitý štandard(biela,tmavo-fialová,fialová..) je z hľadiska farbosleposti bezpečný. Celý design bol navrhnutý tak, aby bolo všetko dobre čítateľné a príjemné na ľudské oko - kontrast. Konzistentnosť typografie atď.
+		</p>
+
+		<p>
+			Detailnejšie popisy funkcií je možné nájsť v readme.txt.
+			<b>ScaleUp/ScaleDown</b> -> Zväčši/zmenši obsah sekcie.
+			<b>ImgDetailed/ImgNormal</b> -> Zarovná obr. na stred + ho zväčši/zmenši.
+			<b>scrollSwitch</b> -> Slúži ako prepínač. Ak ho deaktivujeme, stránka sa nebude prispôsobovať na scroll. Ak ho aktivujeme(default) stránka(sekcia) sa bude prisposobovať na scroll.
+
+			Pri špecifických rozlíšeniach, budú načítane rôzne CSS súbory (700px, 900px, 1300px a 1600px), pri kt. dôjde k zmene v niektorých CSS vlastnostiach.
+		</p>
+		<img class="uxui_img" src="image/uxui_img.jpeg" onmouseover="scaleUp()">
+	</div>
+
+</section>
+
+<section class="button-section">
+	<div class=" button-field ">
+		<a onclick="scaleUp()">ScaleUp</a>
+		<a onclick="backToNormal()">ScaleDown</a>
+		<a onclick="ImgDetailed()">ImgDetailed</a>
+		<a onclick="ImgNormal()">ImgNormal</a>
+		<a onclick="switchBool()">scrollSwitch</a>
+		
+	</div>
+
+</section>
+
+
+<!--BOOTSTRAP FOOTER-->
+<footer>
+	<div class="footer jumbotron text-center" style="margin-bottom:0">
+	  <p>Táto stránka bola špecialne vytvorená pre predmet Webové Technológie</p>
+	  <p >Technical University of Košice</p>
+	  <p>By Patrik Zeleňák</p>
+	</div>
+</footer>
+
+<script type="text/javascript">
+	var counter=1;
+
+	Expand=()=>{
+		var bars = document.getElementById("fabars");
+		var close = document.getElementById("faclose");
+		if(counter%2==0){
+			bars.style.display="block"
+			close.style.display="none";
+		}
+		if(counter%2==1){
+			bars.style.display="none"
+			close.style.display="block";
+		}
+		counter++;
+	}
+</script>
+<script type="text/javascript" src="scripts/script.js" defer></script>
+
+</body>
+</html>
